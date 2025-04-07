@@ -1,0 +1,28 @@
+---
+const { language = 'en' } = Astro.props;
+import '../styles/styles.css';
+---
+
+<!DOCTYPE html>
+<html lang={language}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingCraft - Modern Websites for Your Business</title>
+    <!-- Load Lucide from CDN -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-900">
+        <slot />
+        <footer class="bg-gray-900 text-gray-400 py-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <p>© 2025 LandingCraft. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/script.js" is:inline></script> 
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+const { language = 'en' } = Astro.props;
+---
+
+<div class="process-card">
+    <div class="icon-circle"><i data-lucide="message-square"></i></div>
+    <h3 class="text-xl font-semibold mb-2" data-lang="en">Consultation</h3>
+    <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">Консультация</h3>
+    <p class="text-gray-400" data-lang="en">We discuss your goals and requirements.</p>
+    <p class="text-gray-400 hidden" data-lang="ru">Мы обсуждаем ваши цели и требования.</p>
+</div>

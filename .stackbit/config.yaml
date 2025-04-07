@@ -1,0 +1,15 @@
+stackbitVersion: ~0.6.0
+ssg: astro
+models:
+  hero:
+    type: page
+    file: src/content/hero.md
+    fields:
+      - name: title_en
+        type: string
+      - name: title_ru
+        type: string
+      - name: subtitle_en
+        type: string
+      - name: subtitle_ru
+        type: string
