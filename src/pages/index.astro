@@ -1,8 +1,8 @@
 ---
 import "../styles/styles.css";
-import MainLayout from '../layouts/MainLayout.astro';
-import Navbar from '../components/Navbar.astro';
-import Process from '../components/Process.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Process from "../components/Process.astro";
 
 const language = "en";
 ---
@@ -16,31 +16,94 @@ const language = "en";
     <body>
         <div class="min-h-screen bg-gray-900">
             <!-- Navbar -->
-            <nav class="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-700">
-                <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <nav
+                class="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-700"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex items-center justify-between h-16">
                         <div class="flex items-center gap-2">
-                            <i data-lucide="layout-template" class="text-blue-400 w-8 h-8"></i>
-                            <span class="font-bold text-xl text-white">LandingCraft</span>
+                            <i
+                                data-lucide="layout-template"
+                                class="text-blue-400 w-8 h-8"></i>
+                            <span
+                                class="font-bold text-xl text-white"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="brandName"
+                                >LandingCraft</span
+                            >
+                            <!-- Editable brand name -->
                         </div>
-                        <div class="hidden md-flex items-center gap-8">
-                            <a href="#services" class="nav-link">Services</a>
-                            <a href="#pricing" class="nav-link">Pricing</a>
-                            <a href="#contact" class="nav-link">Contact</a>
-                            <select id="language-selector" class="bg-gray-800 text-white border-none p-2 rounded">
+                        <div class="hidden md:flex items-center gap-8">
+                            <a
+                                href="#services"
+                                class="nav-link"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="navLinks.services"
+                                >Services</a
+                            >
+                            <!-- Editable link text -->
+                            <a
+                                href="#pricing"
+                                class="nav-link"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="navLinks.pricing">Pricing</a
+                            >
+                            <!-- Editable link text -->
+                            <a
+                                href="#contact"
+                                class="nav-link"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="navLinks.contact">Contact</a
+                            >
+                            <!-- Editable link text -->
+                            <select
+                                id="language-selector"
+                                class="bg-gray-800 text-white border-none p-2 rounded"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="language"
+                            >
+                                <!-- Editable language selector -->
                                 <option value="en">EN</option>
                                 <option value="ru">RU</option>
                             </select>
                         </div>
-                        <button class="menu-toggle md-hidden p-2">
-                            <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+                        <button class="menu-toggle md:hidden p-2">
+                            <i data-lucide="menu" class="w-6 h-6 text-white"
+                            ></i>
                         </button>
                     </div>
                     <div class="mobile-menu hidden bg-gray-900">
-                        <a href="#services" class="mobile-link">Services</a>
-                        <a href="#pricing" class="mobile-link">Pricing</a>
-                        <a href="#contact" class="mobile-link">Contact</a>
-                        <select id="mobile-language-selector" class="bg-gray-800 text-white border-none p-2 rounded w-full mt-2">
+                        <a
+                            href="#services"
+                            class="mobile-link"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="mobileNavLinks.services"
+                            >Services</a
+                        >
+                        <!-- Editable mobile link text -->
+                        <a
+                            href="#pricing"
+                            class="mobile-link"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="mobileNavLinks.pricing"
+                            >Pricing</a
+                        >
+                        <!-- Editable mobile link text -->
+                        <a
+                            href="#contact"
+                            class="mobile-link"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="mobileNavLinks.contact"
+                            >Contact</a
+                        >
+                        <!-- Editable mobile link text -->
+                        <select
+                            id="mobile-language-selector"
+                            class="bg-gray-800 text-white border-none p-2 rounded w-full mt-2"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="mobileLanguage"
+                        >
+                            <!-- Editable mobile language selector -->
                             <option value="en">EN</option>
                             <option value="ru">RU</option>
                         </select>
@@ -49,31 +112,78 @@ const language = "en";
             </nav>
 
             <!-- Hero Section -->
-            <header id="hero" class="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white pt-16">
-                <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8 py-24 text-center">
+            <header
+                id="hero"
+                class="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white pt-16"
+            >
+                <div
+                    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center"
+                >
                     <div data-lang="en">
-                        <h1 class="text-4xl md-text-6xl font-bold mb-6">
+                        <h1
+                            class="text-4xl md:text-6xl font-bold mb-6"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="heroTitle"
+                        >
                             Creating Modern Websites for<br />
-                            <span class="text-gradient">Your Business</span>
+                            <span
+                                class="text-gradient"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="heroHighlight"
+                                >Your Business</span
+                            >
+                            <!-- Editable highlighted text -->
                         </h1>
-                        <p class="text-xl md-text-2xl mb-8 text-blue-100">
-                            Professional websites with fixed pricing and quality.
+                        <p
+                            class="text-xl md:text-2xl mb-8 text-blue-100"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="heroDescription"
+                        >
+                            Professional websites with fixed pricing and
+                            quality.
                         </p>
                     </div>
                     <div data-lang="ru" class="hidden">
-                        <h1 class="text-4xl md-text-6xl font-bold mb-6">
+                        <h1
+                            class="text-4xl md:text-6xl font-bold mb-6"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="heroTitleRu"
+                        >
                             Создаем современные сайты для<br />
-                            <span class="text-gradient">вашего бизнеса</span>
+                            <span
+                                class="text-gradient"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="heroHighlightRu"
+                                >вашего бизнеса</span
+                            >
+                            <!-- Editable highlighted text in Russian -->
                         </h1>
-                        <p class="text-xl md-text-2xl mb-8 text-blue-100">
-                            Профессиональные сайты с фиксированной ценой и качеством.
+                        <p
+                            class="text-xl md:text-2xl mb-8 text-blue-100"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="heroDescriptionRu"
+                        >
+                            Профессиональные сайты с фиксированной ценой и
+                            качеством.
                         </p>
                     </div>
                     <div class="flex-center gap-4">
-                        <button class="btn btn-blue">
-                            Start Project <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        <button
+                            class="btn btn-blue"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="ctaButtonText"
+                        >
+                            Start Project <i
+                                data-lucide="arrow-right"
+                                class="w-5 h-5"></i>
                         </button>
-                        <button class="btn btn-blue-outline">Learn More</button>
+                        <button
+                            class="btn btn-blue-outline"
+                            data-sb-object-id="LandingPage"
+                            data-sb-field-path="learnMoreButtonText"
+                        >
+                            Learn More
+                        </button>
                     </div>
                 </div>
             </header>
@@ -81,84 +191,191 @@ const language = "en";
             <!-- Our Services Section -->
             <section id="services" class="py-20 px-4 bg-gray-800">
                 <div class="max-w-7xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-12 text-white" data-lang="en">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="servicesTitle"
+                        data-lang="en"
+                    >
                         Our Services
                     </h2>
-                    <h2 class="text-4xl font-bold mb-12 text-white hidden" data-lang="ru">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white hidden"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="servicesTitleRu"
+                        data-lang="ru"
+                    >
                         Наши услуги
                     </h2>
-                    <div class="grid md-grid-cols-4 gap-8">
+                    <div class="grid md:grid-cols-4 gap-8">
                         <div class="service-card">
-                            <i data-lucide="code" class="w-8 h-8 text-blue-400 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <i
+                                data-lucide="code"
+                                class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.modernTech.title"
+                                data-lang="en"
+                            >
                                 Modern Tech
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.modernTech.titleRu"
+                                data-lang="ru"
+                            >
                                 Современные технологии
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.modernTech.description"
+                                data-lang="en"
+                            >
                                 Using the latest tools for development.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.modernTech.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Используем новейшие инструменты для разработки.
                             </p>
                         </div>
                         <div class="service-card">
-                            <i data-lucide="zap" class="w-8 h-8 text-blue-400 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <i
+                                data-lucide="zap"
+                                class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.rapidDevelopment.title"
+                                data-lang="en"
+                            >
                                 Rapid Development
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.rapidDevelopment.titleRu"
+                                data-lang="ru"
+                            >
                                 Быстрая разработка
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.rapidDevelopment.description"
+                                data-lang="en"
+                            >
                                 Fast delivery with quality results.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.rapidDevelopment.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Быстрая доставка с качественными результатами.
                             </p>
                         </div>
                         <div class="service-card">
-                            <i data-lucide="headphones" class="w-8 h-8 text-blue-400 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <i
+                                data-lucide="headphones"
+                                class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.customerSupport.title"
+                                data-lang="en"
+                            >
                                 Customer Support
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.customerSupport.titleRu"
+                                data-lang="ru"
+                            >
                                 Поддержка клиентов
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.customerSupport.description"
+                                data-lang="en"
+                            >
                                 24/7 support for your needs.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.customerSupport.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Поддержка 24/7 для ваших нужд.
                             </p>
                         </div>
                         <div class="service-card">
-                            <i data-lucide="shield" class="w-8 h-8 text-blue-400 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <i
+                                data-lucide="shield"
+                                class="w-8 h-8 text-blue-400 mb-4"></i>
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.security.title"
+                                data-lang="en"
+                            >
                                 Security
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.security.titleRu"
+                                data-lang="ru"
+                            >
                                 Безопасность
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.security.description"
+                                data-lang="en"
+                            >
                                 Secure and reliable solutions.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="services.security.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Безопасные и надежные решения.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-
             <!-- How We Work Section -->
             <section id="process" class="py-20 px-4 bg-gray-900">
                 <div class="max-w-7xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-12 text-white" data-lang="en">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="howWeWorkTitle"
+                        data-lang="en"
+                    >
                         How We Work
                     </h2>
-                    <h2 class="text-4xl font-bold mb-12 text-white hidden" data-lang="ru">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white hidden"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="howWeWorkTitleRu"
+                        data-lang="ru"
+                    >
                         Как мы работаем
                     </h2>
                     <div class="process-grid">
@@ -166,16 +383,36 @@ const language = "en";
                             <div class="icon-circle">
                                 <i data-lucide="message-square"></i>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.consultation.title"
+                                data-lang="en"
+                            >
                                 Consultation
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.consultation.titleRu"
+                                data-lang="ru"
+                            >
                                 Консультация
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.consultation.description"
+                                data-lang="en"
+                            >
                                 We discuss your goals and requirements.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.consultation.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Мы обсуждаем ваши цели и требования.
                             </p>
                         </div>
@@ -183,33 +420,74 @@ const language = "en";
                             <div class="icon-circle">
                                 <i data-lucide="code"></i>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.development.title"
+                                data-lang="en"
+                            >
                                 Development
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.development.titleRu"
+                                data-lang="ru"
+                            >
                                 Разработка
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.development.description"
+                                data-lang="en"
+                            >
                                 We build your site using modern tech.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
-                                Мы создаем сайт с использованием современных технологий.
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.development.descriptionRu"
+                                data-lang="ru"
+                            >
+                                Мы создаем сайт с использованием современных
+                                технологий.
                             </p>
                         </div>
                         <div class="process-card">
                             <div class="icon-circle">
                                 <i data-lucide="rocket"></i>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.launch.title"
+                                data-lang="en"
+                            >
                                 Launch
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.launch.titleRu"
+                                data-lang="ru"
+                            >
                                 Запуск
                             </h3>
-                            <p class="text-gray-400" data-lang="en">
+                            <p
+                                class="text-gray-400"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.launch.description"
+                                data-lang="en"
+                            >
                                 We launch your site, fully optimized.
                             </p>
-                            <p class="text-gray-400 hidden" data-lang="ru">
+                            <p
+                                class="text-gray-400 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="processSteps.launch.descriptionRu"
+                                data-lang="ru"
+                            >
                                 Мы запускаем ваш сайт с полной оптимизацией.
                             </p>
                         </div>
@@ -220,219 +498,563 @@ const language = "en";
             <!-- Pricing Plans Section -->
             <section id="pricing" class="py-20 px-4 bg-gray-800">
                 <div class="max-w-7xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-12 text-white" data-lang="en">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="pricingSectionTitle"
+                        data-lang="en"
+                    >
                         Pricing Plans
                     </h2>
-                    <h2 class="text-4xl font-bold mb-12 text-white hidden" data-lang="ru">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white hidden"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="pricingSectionTitleRu"
+                        data-lang="ru"
+                    >
                         Наши тарифы
                     </h2>
-                    <div class="grid md-grid-cols-4 gap-8">
+                    <div class="grid md:grid-cols-4 gap-8">
                         <!-- Tariff 1 -->
                         <div class="pricing-card">
-                            <div class="text-5xl font-bold text-blue-400 mb-4" data-lang="en">
+                            <div
+                                class="text-5xl font-bold text-blue-400 mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[0].price"
+                                data-lang="en"
+                            >
                                 $299
                             </div>
-                            <div class="text-4xl font-bold text-blue-400 mb-4 hidden" data-lang="ru">
+                            <div
+                                class="text-4xl font-bold text-blue-400 mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[0].priceRu"
+                                data-lang="ru"
+                            >
                                 25 000 ₽
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[0].title"
+                                data-lang="en"
+                            >
                                 Landing Page
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[0].titleRu"
+                                data-lang="ru"
+                            >
                                 Лендинг-визитка
                             </h3>
                             <div class="feature-grid">
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Unique Design</span>
-                                    <span data-lang="ru" class="hidden">Уникальный дизайн</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.uniqueDesign"
+                                        data-lang="en">Unique Design</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.uniqueDesignRu"
+                                        data-lang="ru"
+                                        class="hidden">Уникальный дизайн</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Responsive Layout</span>
-                                    <span data-lang="ru" class="hidden">Адаптивный дизайн</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.responsiveLayout"
+                                        data-lang="en">Responsive Layout</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.responsiveLayoutRu"
+                                        data-lang="ru"
+                                        class="hidden">Адаптивный дизайн</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">SEO Optimization</span>
-                                    <span data-lang="ru" class="hidden">SEO-оптимизация</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.seoOptimization"
+                                        data-lang="en">SEO Optimization</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.seoOptimizationRu"
+                                        data-lang="ru"
+                                        class="hidden">SEO-оптимизация</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">7-Day Delivery</span>
-                                    <span data-lang="ru" class="hidden">Доставка за 7 дней</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.delivery"
+                                        data-lang="en">7-Day Delivery</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[0].features.deliveryRu"
+                                        data-lang="ru"
+                                        class="hidden">Доставка за 7 дней</span
+                                    >
                                 </div>
                             </div>
-                            <button class="btn btn-blue-outline" onclick="goToContact('landing-page')">
+                            <button
+                                class="btn btn-blue-outline"
+                                onclick="goToContact('landing-page')"
+                            >
                                 Select
                             </button>
                         </div>
                         <!-- Tariff 2 -->
                         <div class="pricing-card highlighted">
-                            <div class="text-5xl font-bold text-blue-400 mb-4" data-lang="en">
+                            <div
+                                class="text-5xl font-bold text-blue-400 mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[1].price"
+                                data-lang="en"
+                            >
                                 $590
                             </div>
-                            <div class="text-4xl font-bold text-blue-400 mb-4 hidden" data-lang="ru">
+                            <div
+                                class="text-4xl font-bold text-blue-400 mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[1].priceRu"
+                                data-lang="ru"
+                            >
                                 49 000 ₽
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[1].title"
+                                data-lang="en"
+                            >
                                 Services Sector
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[1].titleRu"
+                                data-lang="ru"
+                            >
                                 Сфера услуг
                             </h3>
                             <div class="feature-grid">
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">All Landing Features</span>
-                                    <span data-lang="ru" class="hidden">Все из тарифа "Лендинг"</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.allLandingFeatures"
+                                        data-lang="en"
+                                        >All Landing Features</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.allLandingFeaturesRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Все из тарифа "Лендинг"</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Booking Calendar</span>
-                                    <span data-lang="ru" class="hidden">Календарь записи</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.bookingCalendar"
+                                        data-lang="en">Booking Calendar</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.bookingCalendarRu"
+                                        data-lang="ru"
+                                        class="hidden">Календарь записи</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Contact Form</span>
-                                    <span data-lang="ru" class="hidden">Форма обратной связи</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.contactForm"
+                                        data-lang="en">Contact Form</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.contactFormRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Форма обратной связи</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Analytics Setup</span>
-                                    <span data-lang="ru" class="hidden">Настройка аналитики</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.analyticsSetup"
+                                        data-lang="en">Analytics Setup</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[1].features.analyticsSetupRu"
+                                        data-lang="ru"
+                                        class="hidden">Настройка аналитики</span
+                                    >
                                 </div>
                             </div>
-                            <button class="btn btn-blue" onclick="goToContact('services-sector')">
+                            <button
+                                class="btn btn-blue"
+                                onclick="goToContact('services-sector')"
+                            >
                                 Select
                             </button>
                         </div>
                         <!-- Tariff 3 -->
                         <div class="pricing-card">
-                            <div class="text-5xl font-bold text-blue-400 mb-4" data-lang="en">
+                            <div
+                                class="text-5xl font-bold text-blue-400 mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[2].price"
+                                data-lang="en"
+                            >
                                 $790
                             </div>
-                            <div class="text-4xl font-bold text-blue-400 mb-4 hidden" data-lang="ru">
+                            <div
+                                class="text-4xl font-bold text-blue-400 mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[2].priceRu"
+                                data-lang="ru"
+                            >
                                 69 000 ₽
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[2].title"
+                                data-lang="en"
+                            >
                                 Premium
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[2].titleRu"
+                                data-lang="ru"
+                            >
                                 Премиум
                             </h3>
                             <div class="feature-grid">
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">All Services Features</span>
-                                    <span data-lang="ru" class="hidden">Все из тарифа "Сфера услуг"</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.allServicesFeatures"
+                                        data-lang="en"
+                                        >All Services Features</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.allServicesFeaturesRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Все из тарифа "Сфера услуг"</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Payment System</span>
-                                    <span data-lang="ru" class="hidden">Платежная система</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.paymentSystem"
+                                        data-lang="en">Payment System</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.paymentSystemRu"
+                                        data-lang="ru"
+                                        class="hidden">Платежная система</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Priority Support</span>
-                                    <span data-lang="ru" class="hidden">Приоритетная поддержка</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.prioritySupport"
+                                        data-lang="en">Priority Support</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.prioritySupportRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Приоритетная поддержка</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Custom Features</span>
-                                    <span data-lang="ru" class="hidden">Пользовательские функции</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.customFeatures"
+                                        data-lang="en">Custom Features</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[2].features.customFeaturesRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Пользовательские функции</span
+                                    >
                                 </div>
                             </div>
-                            <button class="btn btn-blue-outline" onclick="goToContact('premium')">
+                            <button
+                                class="btn btn-blue-outline"
+                                onclick="goToContact('premium')"
+                            >
                                 Select
                             </button>
                         </div>
                         <!-- Custom -->
                         <div class="pricing-card">
-                            <div class="text-5xl font-bold text-blue-400 mb-4" data-lang="en">
+                            <div
+                                class="text-5xl font-bold text-blue-400 mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[3].price"
+                                data-lang="en"
+                            >
                                 Custom
                             </div>
-                            <div class="text-4xl font-bold text-blue-400 mb-4 hidden" data-lang="ru">
+                            <div
+                                class="text-4xl font-bold text-blue-400 mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[3].priceRu"
+                                data-lang="ru"
+                            >
                                 Индивидуально
                             </div>
-                            <h3 class="text-xl font-semibold mb-2" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-2"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[3].title"
+                                data-lang="en"
+                            >
                                 Contact Us
                             </h3>
-                            <h3 class="text-xl font-semibold mb-2 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-2 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="pricingPlans[3].titleRu"
+                                data-lang="ru"
+                            >
                                 Свяжитесь с нами
                             </h3>
                             <div class="feature-grid">
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Unique Features</span>
-                                    <span data-lang="ru" class="hidden">Уникальные функции</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.uniqueFeatures"
+                                        data-lang="en">Unique Features</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.uniqueFeaturesRu"
+                                        data-lang="ru"
+                                        class="hidden">Уникальные функции</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Custom Integrations</span>
-                                    <span data-lang="ru" class="hidden">Индивидуальные интеграции</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.customIntegrations"
+                                        data-lang="en">Custom Integrations</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.customIntegrationsRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Индивидуальные интеграции</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Flexible Timeline</span>
-                                    <span data-lang="ru" class="hidden">Гибкий график</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.flexibleTimeline"
+                                        data-lang="en">Flexible Timeline</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.flexibleTimelineRu"
+                                        data-lang="ru"
+                                        class="hidden">Гибкий график</span
+                                    >
                                 </div>
                                 <div class="feature-item">
-                                    <i data-lucide="check-circle-2" class="text-green-500"></i>
-                                    <span data-lang="en">Dedicated Support</span>
-                                    <span data-lang="ru" class="hidden">Выделенная поддержка</span>
+                                    <i
+                                        data-lucide="check-circle-2"
+                                        class="text-green-500"></i>
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.dedicatedSupport"
+                                        data-lang="en">Dedicated Support</span
+                                    >
+                                    <span
+                                        data-sb-object-id="LandingPage"
+                                        data-sb-field-path="pricingPlans[3].features.dedicatedSupportRu"
+                                        data-lang="ru"
+                                        class="hidden"
+                                        >Выделенная поддержка</span
+                                    >
                                 </div>
                             </div>
-                            <button class="btn btn-blue-outline" onclick="goToContact('custom')">
+                            <button
+                                class="btn btn-blue-outline"
+                                onclick="goToContact('custom')"
+                            >
                                 Contact
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
-
             <!-- Contact Us Section -->
             <section id="contact" class="py-20 px-4 bg-gray-900">
                 <div class="max-w-7xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-12 text-white" data-lang="en">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="contactSectionTitle"
+                        data-lang="en"
+                    >
                         Contact Us
                     </h2>
-                    <h2 class="text-4xl font-bold mb-12 text-white hidden" data-lang="ru">
+                    <h2
+                        class="text-4xl font-bold mb-12 text-white hidden"
+                        data-sb-object-id="LandingPage"
+                        data-sb-field-path="contactSectionTitleRu"
+                        data-lang="ru"
+                    >
                         Свяжитесь с нами
                     </h2>
-                    <div class="grid md-grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                         <div class="contact-card text-left">
-                            <h3 class="text-xl font-semibold mb-4" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="contactInfoTitle"
+                                data-lang="en"
+                            >
                                 Contact Information
                             </h3>
-                            <h3 class="text-xl font-semibold mb-4 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="contactInfoTitleRu"
+                                data-lang="ru"
+                            >
                                 Контактная информация
                             </h3>
                             <p class="text-gray-400 mb-2">
-                                <i data-lucide="send" class="w-5 h-5 inline-block mr-2 text-blue-400"></i>
-                                @Test
+                                <i
+                                    data-lucide="send"
+                                    class="w-5 h-5 inline-block mr-2 text-blue-400"
+                                ></i>
+                                <span
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactEmail"
+                                    data-lang="en">@Test</span
+                                >
                             </p>
                             <p class="text-gray-400" data-lang="en">
-                                <i data-lucide="map-pin" class="w-5 h-5 inline-block mr-2 text-blue-400"></i>
-                                Berlin, Germany
+                                <i
+                                    data-lucide="map-pin"
+                                    class="w-5 h-5 inline-block mr-2 text-blue-400"
+                                ></i>
+                                <span
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactLocation"
+                                    data-lang="en">Berlin, Germany</span
+                                >
                             </p>
                             <p class="text-gray-400 hidden" data-lang="ru">
-                                <i data-lucide="map-pin" class="w-5 h-5 inline-block mr-2 text-blue-400"></i>
-                                Сан-Франциско, Калифорния
+                                <i
+                                    data-lucide="map-pin"
+                                    class="w-5 h-5 inline-block mr-2 text-blue-400"
+                                ></i>
+                                <span
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactLocationRu"
+                                    data-lang="ru"
+                                    >Сан-Франциско, Калифорния</span
+                                >
                             </p>
                         </div>
                         <div class="contact-form">
-                            <h3 class="text-xl font-semibold mb-4" data-lang="en">
+                            <h3
+                                class="text-xl font-semibold mb-4"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="contactFormTitle"
+                                data-lang="en"
+                            >
                                 Send us a message
                             </h3>
-                            <h3 class="text-xl font-semibold mb-4 hidden" data-lang="ru">
+                            <h3
+                                class="text-xl font-semibold mb-4 hidden"
+                                data-sb-object-id="LandingPage"
+                                data-sb-field-path="contactFormTitleRu"
+                                data-lang="ru"
+                            >
                                 Отправьте нам сообщение
                             </h3>
-                            <form id="contact-form" action="https://formspree.io/f/xovepaev" method="POST">
+                            <form
+                                id="contact-form"
+                                action="https://formspree.io/f/xovepaev"
+                                method="POST"
+                            >
                                 <input
                                     type="text"
                                     name="name"
                                     placeholder="Your Name"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.namePlaceholder"
                                     data-lang="en"
                                     required
                                     class="w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400"
@@ -441,6 +1063,8 @@ const language = "en";
                                     type="text"
                                     name="name"
                                     placeholder="Ваше имя"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.namePlaceholderRu"
                                     data-lang="ru"
                                     class="hidden w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400"
                                     required
@@ -449,6 +1073,8 @@ const language = "en";
                                     type="email"
                                     name="email"
                                     placeholder="Your Email"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.emailPlaceholder"
                                     data-lang="en"
                                     required
                                     class="w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400"
@@ -457,42 +1083,89 @@ const language = "en";
                                     type="email"
                                     name="email"
                                     placeholder="Ваш email"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.emailPlaceholderRu"
                                     data-lang="ru"
                                     class="hidden w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400"
                                     required
                                 />
                                 <select
                                     name="price-plan"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.pricePlanPlaceholder"
                                     data-lang="en"
                                     required
                                     style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; background-color: #1f2937; color: #9ca3af; border: 1px solid #4b5563; border-radius: 0.375rem; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 fill=%27%239ca3af%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%27/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 12px;"
                                 >
-                                    <option value="" disabled selected style="color: #9ca3af;">
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                        style="color: #9ca3af;"
+                                    >
                                         Select a Price Plan
                                     </option>
-                                    <option value="landing-page" style="color: #ffffff;">Landing Page</option>
-                                    <option value="services-sector" style="color: #ffffff;">Services Sector</option>
-                                    <option value="premium" style="color: #ffffff;">Premium</option>
-                                    <option value="custom" style="color: #ffffff;">Custom</option>
+                                    <option
+                                        value="landing-page"
+                                        style="color: #ffffff;"
+                                        >Landing Page</option
+                                    >
+                                    <option
+                                        value="services-sector"
+                                        style="color: #ffffff;"
+                                        >Services Sector</option
+                                    >
+                                    <option
+                                        value="premium"
+                                        style="color: #ffffff;">Premium</option
+                                    >
+                                    <option
+                                        value="custom"
+                                        style="color: #ffffff;">Custom</option
+                                    >
                                 </select>
                                 <select
                                     name="price-plan"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.pricePlanPlaceholderRu"
                                     data-lang="ru"
                                     class="hidden"
                                     required
                                     style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; background-color: #1f2937; color: #9ca3af; border: 1px solid #4b5563; border-radius: 0.375rem; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 fill=%27%239ca3af%27 viewBox=%270 0 20 20%27%3E%3Cpath d=%27M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%27/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 12px;"
                                 >
-                                    <option value="" disabled selected style="color: #9ca3af;">
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                        style="color: #9ca3af;"
+                                    >
                                         Выберите тарифный план
                                     </option>
-                                    <option value="landing-page" style="color: #ffffff;">Лендинг-визитка</option>
-                                    <option value="services-sector" style="color: #ffffff;">Сфера услуг</option>
-                                    <option value="premium" style="color: #ffffff;">Премиум</option>
-                                    <option value="custom" style="color: #ffffff;">Индивидуально</option>
+                                    <option
+                                        value="landing-page"
+                                        style="color: #ffffff;"
+                                        >Лендинг-визитка</option
+                                    >
+                                    <option
+                                        value="services-sector"
+                                        style="color: #ffffff;"
+                                        >Сфера услуг</option
+                                    >
+                                    <option
+                                        value="premium"
+                                        style="color: #ffffff;">Премиум</option
+                                    >
+                                    <option
+                                        value="custom"
+                                        style="color: #ffffff;"
+                                        >Индивидуально</option
+                                    >
                                 </select>
                                 <textarea
                                     name="message"
                                     placeholder="Your Message"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.messagePlaceholder"
                                     data-lang="en"
                                     required
                                     class="w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400 h-32"
@@ -500,20 +1173,38 @@ const language = "en";
                                 <textarea
                                     name="message"
                                     placeholder="Ваше сообщение"
+                                    data-sb-object-id="LandingPage"
+                                    data-sb-field-path="contactForm.messagePlaceholderRu"
                                     data-lang="ru"
                                     class="hidden w-full p-3 mb-4 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-400 h-32"
-                                    required
-                                ></textarea>
-                                <button type="submit" class="btn btn-blue w-full">
+                                    required></textarea>
+                                <button
+                                    type="submit"
+                                    class="btn btn-blue w-full"
+                                >
                                     <span data-lang="en">Send Message</span>
-                                    <span data-lang="ru" class="hidden">Отправить</span>
+                                    <span data-lang="ru" class="hidden"
+                                        >Отправить</span
+                                    >
                                 </button>
                             </form>
-                            <div id="form-response" class="mt-4 text-center hidden">
-                                <p class="text-green-500" data-lang="en">Message sent successfully!</p>
-                                <p class="text-green-500 hidden" data-lang="ru">Сообщение успешно отправлено!</p>
-                                <p class="text-red-500 hidden" data-lang="en">Error sending message. Please try again.</p>
-                                <p class="text-red-500 hidden" data-lang="ru">Ошибка при отправке сообщения. Пожалуйста, попробуйте снова.</p>
+                            <div
+                                id="form-response"
+                                class="mt-4 text-center hidden"
+                            >
+                                <p class="text-green-500" data-lang="en">
+                                    Message sent successfully!
+                                </p>
+                                <p class="text-green-500 hidden" data-lang="ru">
+                                    Сообщение успешно отправлено!
+                                </p>
+                                <p class="text-red-500 hidden" data-lang="en">
+                                    Error sending message. Please try again.
+                                </p>
+                                <p class="text-red-500 hidden" data-lang="ru">
+                                    Ошибка при отправке сообщения. Пожалуйста,
+                                    попробуйте снова.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -530,8 +1221,8 @@ const language = "en";
 
         <!-- Client-side script to load Lucide locally with a slight tweak -->
         <script>
-            import { createIcons } from 'lucide';
-            document.addEventListener('DOMContentLoaded', () => {
+            import { createIcons } from "lucide";
+            document.addEventListener("DOMContentLoaded", () => {
                 createIcons();
             });
         </script>
